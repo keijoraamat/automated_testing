@@ -10,10 +10,6 @@ public class Greeting {
             return String.format("Hello, %s", NAMELESS);
         }
 
-        else if (name.length() == 0) {
-            return String.format("Hello, %s", NAMELESS);
-        }
-
         else if (name.trim().length() == 0) {
             return String.format("Hello, %s", NAMELESS);
         }
