@@ -17,7 +17,7 @@ public class GreetingTest {
         String actualResult = greeting.greet(name);
 
         // Assert
-        assertThat(expectedResult).isEqualTo(actualResult);
+        assertThat(actualResult).isEqualTo(expectedResult);
 
     }
 }
