@@ -11,6 +11,8 @@ plugins {
     id 'application'
 }
 
+def apacheCommonsVersion = '3.0'
+
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
@@ -24,6 +26,12 @@ dependencies {
 
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:31.0.1-jre'
+
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    implementation group: 'org.apache.commons',
+        name: 'commons-lang3',
+        version: apacheCommonsVersion
+
 }
 
 application {
