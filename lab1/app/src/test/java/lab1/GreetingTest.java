@@ -65,4 +65,18 @@ public class GreetingTest {
         // Assert
         assertThat(actualResult).isEqualTo(expectedResult);
     }
+
+    @Test
+    public void should_return_uppercase_greeting_when_given_name_in_uppercase(){
+        // Arrange
+        String name = "OTTOKAR";
+        Greeting greeting = new Greeting();
+        String expectedResult = String.format("HELLO, %s", name);
+
+        // Act
+        String actualResult = greeting.greet(name);
+
+        // Assert
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
 }
