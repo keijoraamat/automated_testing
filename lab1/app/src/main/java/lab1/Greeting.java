@@ -23,4 +23,8 @@ public class Greeting {
 
         return String.format("%s, %s", GREETING, name);
     }
+
+    public String greet(String[] names){
+        return "";
+    }
 }

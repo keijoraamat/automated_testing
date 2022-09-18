@@ -79,4 +79,18 @@ public class GreetingTest {
         // Assert
         assertThat(actualResult).isEqualTo(expectedResult);
     }
+
+    @Test
+    public void should_return_two_names_concatenated_with_and_when_given_array_of_two_names(){
+        // Arrange
+        String[] names = {"Peter", "Tiina"};
+        Greeting greeting = new Greeting();
+        String expectedResult = String.format("Hello, %s and %s", names[0], names[1]);
+
+        // Act
+        String actualResult = greeting.greet(names);
+
+        // Assert
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
 }
