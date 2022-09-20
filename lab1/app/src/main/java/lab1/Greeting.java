@@ -6,7 +6,7 @@ public class Greeting {
 
     public static String NAMELESS = "my friend";
     public static String GREETING = "Hello";
-    
+
     public String greet(String name){
 
         if (name == null) { 
@@ -24,7 +24,10 @@ public class Greeting {
         return String.format("%s, %s", GREETING, name);
     }
 
-    public String greet(String[] names){
-        return String.format("%s, %s and %s", GREETING, names[0], names[1]);
+    public String greet(String[] names) throws Exception {
+        if (names.length == 2) {
+            return String.format("%s, %s and %s", GREETING, names[0], names[1]);
+        }
+        throw new Exception("Expected 2 names, got: " + names.length);
     }
 }
