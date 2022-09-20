@@ -25,6 +25,6 @@ public class Greeting {
     }
 
     public String greet(String[] names){
-        return "";
+        return String.format("%s, %s and %s", GREETING, names[0], names[1]);
     }
 }
