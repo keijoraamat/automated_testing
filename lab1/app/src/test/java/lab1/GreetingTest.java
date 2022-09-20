@@ -81,7 +81,7 @@ public class GreetingTest {
     }
 
     @Test
-    public void should_return_two_names_concatenated_with_and_when_given_array_of_two_names() throws Exception {
+    public void should_return_two_names_concatenated_with_and_when_given_array_of_two_names(){
         // Arrange
         String[] names = {"Peter", "Tiina"};
         Greeting greeting = new Greeting();

@@ -24,10 +24,10 @@ public class Greeting {
         return String.format("%s, %s", GREETING, name);
     }
 
-    public String greet(String[] names) throws Exception {
+    public String greet(String[] names) {
         if (names.length == 2) {
             return String.format("%s, %s and %s", GREETING, names[0], names[1]);
         }
-        throw new Exception("Expected 2 names, got: " + names.length);
+        return "Didn't get so many names as hoped for";
     }
 }
