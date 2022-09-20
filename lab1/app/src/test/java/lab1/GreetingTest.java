@@ -93,4 +93,18 @@ public class GreetingTest {
         // Assert
         assertThat(actualResult).isEqualTo(expectedResult);
     }
+
+    @Test
+    public void should_return_three_names_concatenated_with_commas_and_and_when_given_array_of_more_than_two_names(){
+        // Arrange
+        String[] names = {"Peter", "Tiina", "Mads", "Ukko"};
+        Greeting greeting = new Greeting();
+        String expectedResult = String.format("Hello, %s, %s, %s, and %s", names[0], names[1], names[2], names[3]);
+
+        // Act
+        String actualResult = greeting.greet(names);
+
+        // Assert
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
 }
